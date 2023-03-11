@@ -9,7 +9,8 @@ import react from 'react'
 // don't do this in regular tests!
 const Counter = App().type
 
-jest.mock('react', () => {return {
+jest.mock('react', () => {
+  return {
     ...jest.requireActual('react'),
     useReducer: jest.fn(),
     useState: jest.fn(),
